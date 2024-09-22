@@ -28,6 +28,18 @@ int median(int a, int b, int c, function<bool(int, int)> compare)
     {
         return c;
     }
+    if (compare(a, c) and compare(b, c))
+    {
+        return a;
+    }
+    if (compare(a, b) and compare(c, b))
+    {
+        return a;
+    }
+    if (compare(b, a) and compare(c, a))
+    {
+        return b;
+    }
 }
 
 bool is_less(int a, int b)
